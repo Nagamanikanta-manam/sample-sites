@@ -4,63 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Anagha's Boutique — Customized Ethnic Wear by Anusha Puvvada</title>
-  <meta name="description" content="Anagha's Boutique by Anusha Puvvada — beautiful sarees, frocks, lehangas and customized blouses. Worldwide shipping. DM to order.">
-  <meta property="og:title" content="Anagha's Boutique — Customized Ethnic Wear">
-  <meta property="og:description" content="Beautiful sarees, frocks, lehangas and customized blouses by Anusha Puvvada. Worldwide shipping. DM to order.">
+  <title>Anagha's Boutique — Customised Ethnic Wear by Anusha Puvvada</title>
+  <meta name="description" content="Anagha's Boutique by Anusha Puvvada. Handpicked sarees, long frocks, lehangas and custom blouses. DM to order. Worldwide shipping available.">
+  <meta property="og:title" content="Anagha's Boutique — Customised Ethnic Wear">
+  <meta property="og:description" content="Handpicked sarees, long frocks, lehangas and custom blouses by Anusha Puvvada. Worldwide shipping available.">
   <meta property="og:image" content="https://nagamanikanta-manam.github.io/sample-sites/anagha_s_boutique/assets/profile.jpg">
   <meta property="og:url" content="https://nagamanikanta-manam.github.io/sample-sites/anagha_s_boutique/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --crimson:    #763937;
-      --crimson-lt: #9c4a47;
-      --terra:      #bd816c;
-      --blush:      #d4b6aa;
-      --cream:      #faf8f5;
-      --parchment:  #f2ede4;
-      --sage:       #9eb5a2;
-      --sage-dk:    #6b7d5c;
-      --ink:        #2c1a1a;
-      --muted:      #7a5c5c;
+      --maroon:   #763937;
+      --blush:    #d4b6aa;
+      --terra:    #bd816c;
+      --cream:    #faf6f1;
+      --warm:     #d8d7b4;
+      --sage:     #6b7d5c;
+      --sage-lt:  #9eb5a2;
+      --ink:      #2b1a17;
+      --mid:      #6b4840;
+      --serif:    'Cormorant Garamond', Georgia, serif;
+      --sans:     'Jost', system-ui, sans-serif;
+      --r:        12px;
+      --shadow:   0 4px 24px rgba(118,57,55,0.12);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: var(--sans);
       background: var(--cream);
       color: var(--ink);
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── ANNOUNCEMENT STRIP ── */
+    .strip {
+      background: var(--maroon);
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
     }
 
     /* ── NAV ── */
-    nav {
-      position: fixed;
-      inset: 0 0 auto 0;
+    .nav {
+      position: sticky;
+      top: 0;
       z-index: 100;
-      background: rgba(250, 248, 245, 0.94);
+      background: rgba(250,246,241,0.96);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(118, 57, 55, 0.12);
-      padding: 0.6rem 1.25rem;
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212,182,170,0.4);
+      padding: 0.7rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
+      gap: 1rem;
     }
 
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .nav-logo img {
       width: 38px;
       height: 38px;
       border-radius: 50%;
@@ -69,57 +88,69 @@
       flex-shrink: 0;
     }
 
-    .nav-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--crimson);
+    .nav-logo-text {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--maroon);
       line-height: 1.15;
-    }
-
-    .nav-sub {
-      font-size: 0.65rem;
-      color: var(--muted);
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
     }
 
     .nav-links {
       display: none;
-      list-style: none;
-      gap: 1.75rem;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
     }
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--ink);
+    .nav-links a:hover { color: var(--maroon); transition: color 0.2s; }
+
+    @media (min-width: 560px) {
+      .nav-links { display: flex; }
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      font-family: var(--sans);
       font-size: 0.88rem;
-      font-weight: 600;
-      transition: color 0.2s;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s, transform 0.18s;
     }
 
-    .nav-links a:hover { color: var(--crimson); }
+    .btn:hover { opacity: 0.86; transform: translateY(-1px); }
 
-    @media (min-width: 720px) { .nav-links { display: flex; } }
+    .btn-wa   { background: #25D366; color: #fff; }
+    .btn-ig   { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
+    .btn-outline { background: transparent; border: 1.5px solid rgba(255,255,255,0.55); color: #fff; }
+    .btn-outline-dark { background: transparent; border: 1.5px solid var(--maroon); color: var(--maroon); }
 
     /* ── HERO ── */
     .hero {
       position: relative;
-      min-height: 100svh;
-      min-height: 100vh;
+      min-height: 90svh;
       display: flex;
       align-items: flex-end;
-      padding: 2rem 1.5rem 3.5rem;
       overflow: hidden;
     }
 
-    .hero-bg {
+    .hero-img {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: center top;
     }
 
     .hero-overlay {
@@ -127,581 +158,569 @@
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(20, 6, 6, 0.88) 0%,
-        rgba(20, 6, 6, 0.45) 45%,
-        rgba(20, 6, 6, 0.08) 100%
+        rgba(26,8,6,0.86) 0%,
+        rgba(26,8,6,0.48) 42%,
+        rgba(26,8,6,0.06) 100%
       );
     }
 
-    .hero-content {
+    .hero-body {
       position: relative;
-      z-index: 1;
+      padding: 2.5rem 1.5rem 3rem;
       color: #fff;
-      max-width: 560px;
+      max-width: 660px;
     }
 
     .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 2.5px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--blush);
-      font-weight: 600;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
     }
 
     .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 9vw, 4.2rem);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 10vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.08;
+      margin-bottom: 0.75rem;
     }
 
     .hero-title em {
       font-style: italic;
+      font-weight: 400;
       color: var(--blush);
     }
 
     .hero-sub {
       font-size: 1rem;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 2rem;
-      max-width: 420px;
-      line-height: 1.75;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      max-width: 38ch;
+      margin-bottom: 1.4rem;
     }
 
-    .hero-actions {
+    .hero-tags {
       display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    @media (min-width: 420px) {
-      .hero-actions { flex-direction: row; flex-wrap: wrap; }
-    }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 1.25rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(255,255,255,0.45);
-      animation: nudge 2.2s ease-in-out infinite;
-    }
-
-    @keyframes nudge {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50%       { transform: translateX(-50%) translateY(7px); }
-    }
-
-    /* ── BUTTONS ── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      flex-wrap: wrap;
       gap: 0.45rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.92rem;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      transition: transform 0.18s, box-shadow 0.18s;
-      white-space: nowrap;
+      margin-bottom: 1.5rem;
     }
 
-    .btn:active { transform: scale(0.96); }
-
-    .btn-wa {
-      background: #25D366;
+    .hero-tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
       color: #fff;
-      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      padding: 0.28rem 0.8rem;
+      border-radius: 100px;
     }
-    .btn-wa:hover { box-shadow: 0 6px 26px rgba(37, 211, 102, 0.5); }
 
-    .btn-ghost {
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.55);
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
     }
-    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
 
-    .btn-primary {
-      background: var(--crimson);
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(118, 57, 55, 0.32);
-    }
-    .btn-primary:hover { box-shadow: 0 6px 22px rgba(118, 57, 55, 0.48); }
-
-    /* ── SHARED LAYOUT ── */
-    .section { padding: 5rem 1.5rem; }
-    .section[id] { scroll-margin-top: 64px; }
-
-    .container {
-      max-width: 1080px;
+    /* ── SHARED SECTION LAYOUT ── */
+    .sec {
+      padding: 4rem 1.25rem;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .label {
-      font-size: 0.7rem;
-      letter-spacing: 2.5px;
+    .sec-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      font-weight: 700;
       color: var(--terra);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
     }
 
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.85rem, 5vw, 2.7rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 5.5vw, 2.75rem);
+      font-weight: 600;
+      color: var(--maroon);
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
+    }
+
+    .sec-rule {
+      width: 44px;
+      height: 2px;
+      background: var(--terra);
+      margin-bottom: 1.75rem;
     }
 
     /* ── ABOUT ── */
-    .about-bg { background: var(--parchment); }
-
     .about-grid {
       display: grid;
       gap: 2.5rem;
       align-items: center;
     }
 
-    @media (min-width: 720px) {
-      .about-grid { grid-template-columns: 1fr 1.15fr; }
+    @media (min-width: 680px) {
+      .about-grid { grid-template-columns: 280px 1fr; }
     }
 
-    .about-imgs {
+    .about-img-wrap {
       position: relative;
-      padding-bottom: 2.5rem;
+      max-width: 280px;
     }
 
-    .about-main {
+    .about-img {
       width: 100%;
-      max-width: 360px;
-      aspect-ratio: 3/4;
+      aspect-ratio: 4/5;
       object-fit: cover;
-      object-position: top;
-      border-radius: 14px;
-      display: block;
+      object-position: center top;
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
     }
 
-    .about-accent {
-      display: none;
+    .about-deco {
       position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 48%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 10px;
-      border: 4px solid var(--parchment);
+      top: -10px;
+      right: -10px;
+      bottom: 10px;
+      left: 10px;
+      border: 2px solid var(--blush);
+      border-radius: var(--r);
+      z-index: -1;
     }
 
-    @media (min-width: 720px) { .about-accent { display: block; } }
-
-    .about-body p {
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.85;
-      margin-bottom: 0.9rem;
+    .about-copy p {
+      color: var(--mid);
+      font-size: 0.97rem;
+      margin-bottom: 1rem;
     }
 
-    .pills {
+    .about-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 0.45rem;
       margin-top: 1.25rem;
     }
 
-    .pill {
-      background: var(--crimson);
-      color: #fff;
+    .chip {
+      background: rgba(118,57,55,0.08);
+      color: var(--maroon);
       font-size: 0.76rem;
-      font-weight: 700;
-      padding: 0.28rem 0.85rem;
-      border-radius: 50px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 0.3rem 0.85rem;
+      border-radius: 100px;
     }
 
     /* ── COLLECTIONS ── */
-    .collections-bg { background: var(--cream); }
+    .collections-bg {
+      background: linear-gradient(180deg, var(--cream) 0%, rgba(212,182,170,0.18) 100%);
+    }
 
     .coll-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.85rem;
-      margin-top: 2rem;
+      gap: 1rem;
+      margin-top: 0.25rem;
     }
 
-    @media (min-width: 640px) {
-      .coll-grid { grid-template-columns: repeat(4, 1fr); }
+    @media (min-width: 760px) {
+      .coll-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
     }
 
     .coll-card {
-      position: relative;
-      aspect-ratio: 2/3;
-      border-radius: 12px;
+      border-radius: var(--r);
       overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
     }
 
-    .coll-card img {
+    .coll-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 36px rgba(118,57,55,0.2);
+    }
+
+    .coll-img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 3/4;
       object-fit: cover;
-      object-position: top;
-      transition: transform 0.42s ease;
-      display: block;
+      object-position: center top;
     }
 
-    .coll-card:hover img { transform: scale(1.05); }
-
-    .coll-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(20,6,6,0.82) 0%, transparent 55%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1rem 0.9rem 1rem;
+    .coll-body {
+      padding: 0.85rem 1rem 1rem;
+      border-top: 2px solid var(--blush);
     }
 
-    .coll-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
+    .coll-name {
+      font-family: var(--serif);
+      font-size: 1.15rem;
       font-weight: 600;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 0.25rem;
+      color: var(--maroon);
+      margin-bottom: 0.2rem;
     }
 
     .coll-desc {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.4;
+      font-size: 0.77rem;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    .coll-cta {
+      margin-top: 1.75rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--mid);
+    }
+
+    .coll-cta a {
+      color: var(--maroon);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* ── GALLERY ── */
-    .gallery-bg { background: var(--parchment); }
-
-    .gallery-hd { text-align: center; margin-bottom: 2rem; }
-
-    .masonry {
-      columns: 2;
-      column-gap: 0.7rem;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.45rem;
+      margin-top: 0.25rem;
     }
 
-    @media (min-width: 560px) { .masonry { columns: 3; } }
-    @media (min-width: 900px) { .masonry { columns: 4; } }
+    @media (min-width: 640px) {
+      .gallery-grid { gap: 0.7rem; }
+    }
 
-    .masonry-item {
-      break-inside: avoid;
-      margin-bottom: 0.7rem;
-      border-radius: 8px;
+    .gal-item {
+      aspect-ratio: 1;
       overflow: hidden;
-      display: block;
+      border-radius: 8px;
+      background: #e8ddd8;
     }
 
-    .masonry-item img {
+    .gal-item img {
       width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.3s ease;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
     }
 
-    .masonry-item:hover img { transform: scale(1.04); }
+    .gal-item:hover img { transform: scale(1.07); }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: 1.75rem;
+    }
 
     /* ── CONTACT ── */
     .contact-bg {
-      background: var(--crimson);
+      background: var(--maroon);
       color: #fff;
-      text-align: center;
     }
 
-    .contact-bg .label { color: var(--blush); }
-    .contact-bg h2 { color: #fff; }
+    .contact-bg .sec-label { color: var(--blush); }
+    .contact-bg .sec-title { color: #fff; }
+    .contact-bg .sec-rule  { background: var(--blush); }
 
-    .contact-sub {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 460px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
+    .contact-body {
+      font-size: 0.97rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.82);
+      max-width: 50ch;
+      margin-bottom: 1.75rem;
+      line-height: 1.7;
     }
 
-    .contact-btns {
+    .contact-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-details {
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
-      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      border-top: 1px solid rgba(212,182,170,0.25);
+      padding-top: 1.5rem;
+      margin-top: 0.25rem;
     }
 
-    @media (min-width: 460px) {
-      .contact-btns { flex-direction: row; justify-content: center; }
-    }
-
-    .contact-also {
-      margin-top: 1.5rem;
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.55);
-    }
-
-    .contact-also a {
-      color: rgba(255,255,255,0.78);
-      text-decoration: none;
+    .contact-details a {
+      color: var(--blush);
       transition: color 0.2s;
     }
 
-    .contact-also a:hover { color: #fff; }
+    .contact-details a:hover { color: #fff; }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .contact-row svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
 
     /* ── FOOTER ── */
     footer {
-      background: #160a0a;
-      color: rgba(255,255,255,0.38);
+      background: var(--ink);
+      color: rgba(255,255,255,0.4);
       text-align: center;
-      padding: 1.25rem 1rem;
-      font-size: 0.72rem;
-      line-height: 1.6;
+      padding: 1.1rem 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.03em;
     }
 
-    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-    footer a:hover { color: rgba(255,255,255,0.75); }
-
-    /* ── FLOATING WHATSAPP (mobile only) ── */
-    .float-wa {
+    /* ── FLOATING WA BUTTON ── */
+    .wa-fab {
       position: fixed;
-      bottom: 1.25rem;
+      bottom: 1.5rem;
       right: 1.25rem;
       z-index: 200;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
+      width: 56px;
+      height: 56px;
       background: #25D366;
-      color: #fff;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 22px rgba(0,0,0,0.28);
+      box-shadow: 0 4px 18px rgba(37,211,102,0.5);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(0,0,0,0.35); }
-    .float-wa svg { width: 26px; height: 26px; }
+    .wa-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 26px rgba(37,211,102,0.6);
+    }
 
-    @media (min-width: 720px) { .float-wa { display: none; } }
+    .wa-fab svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="nav-brand">
-    <img src="assets/profile.jpg" alt="Anagha's Boutique" class="nav-logo">
-    <div>
-      <div class="nav-name">Anagha's Boutique</div>
-      <div class="nav-sub">Customized Ethnic Wear</div>
-    </div>
+<!-- Announcement strip -->
+<div class="strip">Worldwide Shipping &nbsp;&middot;&nbsp; DM to Order &nbsp;&middot;&nbsp; Customised Ethnic Wear</div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a class="nav-logo" href="#hero">
+    <img src="assets/profile.jpg" alt="Anagha's Boutique">
+    <span class="nav-logo-text">Anagha's Boutique</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#collections">Collections</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#collections">Collections</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero" id="hero">
-  <img
-    src="assets/post_03.jpg"
-    alt="Pastel pink self-work long frock from Anagha's Boutique"
-    class="hero-bg"
-  >
+<!-- Hero -->
+<section class="hero" id="hero">
+  <img class="hero-img" src="assets/post_01.jpg" alt="Woman wearing a Mangalagiri saree from Anagha's Boutique">
   <div class="hero-overlay"></div>
-  <div class="hero-content">
+  <div class="hero-body">
     <p class="hero-eyebrow">By Anusha Puvvada</p>
     <h1 class="hero-title">Anagha's<br><em>Boutique</em></h1>
-    <p class="hero-sub">Customized ethnic wear you'll love to wear — sarees, frocks, lehangas and designer blouses, shipped anywhere in the world.</p>
-    <div class="hero-actions">
+    <p class="hero-sub">Sarees, frocks and lehangas that celebrate who you are — made to feel as beautiful as they look.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Sarees</span>
+      <span class="hero-tag">Long Frocks</span>
+      <span class="hero-tag">Lehangas</span>
+      <span class="hero-tag">Custom Blouses</span>
+      <span class="hero-tag">Worldwide Shipping</span>
+    </div>
+    <div class="hero-ctas">
       <a href="https://wa.me/917416806316" class="btn btn-wa" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Chat on WhatsApp
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us
       </a>
-      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ghost" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        Follow on Instagram
-      </a>
+      <a href="#collections" class="btn btn-outline">View Collections</a>
     </div>
   </div>
-  <div class="scroll-hint" aria-hidden="true">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
-</div>
+</section>
 
-<!-- ABOUT -->
-<section class="section about-bg" id="about">
-  <div class="container">
+<!-- About -->
+<section id="about">
+  <div class="sec">
     <div class="about-grid">
-      <div class="about-imgs">
-        <img
-          src="assets/post_01.jpg"
-          alt="Client wearing a rich Mangalagiri saree from Anagha's Boutique"
-          class="about-main"
-          loading="lazy"
-        >
-        <img
-          src="assets/post_12.jpg"
-          alt="Child in a Kalamkari lehanga from Anagha's Boutique"
-          class="about-accent"
-          loading="lazy"
-        >
+      <div class="about-img-wrap">
+        <img class="about-img" src="assets/profile.jpg" alt="Anusha Puvvada, founder of Anagha's Boutique" loading="lazy">
+        <div class="about-deco" aria-hidden="true"></div>
       </div>
-      <div class="about-body">
-        <p class="label">Our Story</p>
-        <h2>Crafted with love,<br>worn with joy</h2>
-        <p>Hi, I'm Anusha Puvvada — the heart behind Anagha's Boutique. What started as a deep love for ethnic fashion has grown into a carefully curated collection of sarees, frocks, lehangas and custom blouses.</p>
-        <p>Every piece I offer is handpicked for its quality, colour and craftsmanship — whether it's a rich silk pattu saree for a wedding or a breezy organza frock for a family celebration. I love helping people find outfits that make them feel beautiful.</p>
-        <p>We offer worldwide shipping, so no matter where you are, Anagha's Boutique comes to you.</p>
-        <div class="pills">
-          <span class="pill">Sarees</span>
-          <span class="pill">Long Frocks</span>
-          <span class="pill">Lehangas</span>
-          <span class="pill">Custom Blouses</span>
-          <span class="pill">Worldwide Shipping</span>
+      <div class="about-copy">
+        <p class="sec-label">Our Story</p>
+        <h2 class="sec-title">Dressed in tradition,<br>made with love</h2>
+        <div class="sec-rule"></div>
+        <p>Hi, I'm Anusha Puvvada — the heart behind Anagha's Boutique. I started this boutique out of a genuine love for ethnic clothing and a desire to help women discover outfits that truly honour their roots.</p>
+        <p>From rich Mangalagiri and organza sarees to soft pastel long frocks, Kalamkari lehangas and finely embroidered custom blouses — every piece I curate is chosen with care. I work with each customer personally to make sure you find exactly what you're looking for, or create something made just for you.</p>
+        <div class="about-chips">
+          <span class="chip">Customised Ethnic Wear</span>
+          <span class="chip">Sarees</span>
+          <span class="chip">Frocks &amp; Lehangas</span>
+          <span class="chip">Designer Blouses</span>
+          <span class="chip">Worldwide Shipping</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COLLECTIONS -->
-<section class="section collections-bg" id="collections">
-  <div class="container">
-    <p class="label">Collections</p>
-    <h2>What we offer</h2>
+<!-- Collections -->
+<div class="collections-bg" id="collections">
+  <div class="sec">
+    <p class="sec-label">What We Offer</p>
+    <h2 class="sec-title">Our Collections</h2>
+    <div class="sec-rule"></div>
     <div class="coll-grid">
 
       <div class="coll-card">
-        <img src="assets/post_07.jpg" alt="Cherry red organza saree with rich pallu" loading="lazy">
-        <div class="coll-overlay">
-          <div class="coll-title">Sarees</div>
-          <div class="coll-desc">Organza · Pattu · Mangalagiri · Tissue · Chiffon</div>
+        <img class="coll-img" src="assets/post_07.jpg" alt="Cherry red organza saree with rich pallu" loading="lazy">
+        <div class="coll-body">
+          <p class="coll-name">Sarees</p>
+          <p class="coll-desc">Organza, tissue pattu, Mangalagiri, chiffon and digital-printed sarees in a range of vibrant shades.</p>
         </div>
       </div>
 
       <div class="coll-card">
-        <img src="assets/post_02.jpg" alt="Apple green organza frock available in various colours" loading="lazy">
-        <div class="coll-overlay">
-          <div class="coll-title">Frocks &amp; Dresses</div>
-          <div class="coll-desc">Long frocks · Organza · Floral · Pastel shades</div>
+        <img class="coll-img" src="assets/post_03.jpg" alt="Pastel pink self-work long frock" loading="lazy">
+        <div class="coll-body">
+          <p class="coll-name">Long Frocks</p>
+          <p class="coll-desc">Flowy organza and floral-embroidered long frocks — in pastels, whites, lilacs and more.</p>
         </div>
       </div>
 
       <div class="coll-card">
-        <img src="assets/post_12.jpg" alt="Kalamkari lehanga with raw pattu blouse" loading="lazy">
-        <div class="coll-overlay">
-          <div class="coll-title">Lehangas</div>
-          <div class="coll-desc">Kalamkari · Traditional · Adults &amp; Kids</div>
+        <img class="coll-img" src="assets/post_12.jpg" alt="Kalamkari lehanga with raw pattu blouse" loading="lazy">
+        <div class="coll-body">
+          <p class="coll-name">Lehangas</p>
+          <p class="coll-desc">Kalamkari and ethnic lehangas for women and children — for every celebration that matters.</p>
         </div>
       </div>
 
       <div class="coll-card">
-        <img src="assets/post_10.jpg" alt="Embroidered pastel customised designer blouse" loading="lazy">
-        <div class="coll-overlay">
-          <div class="coll-title">Custom Blouses</div>
-          <div class="coll-desc">Embroidered · Designer · Made to order</div>
+        <img class="coll-img" src="assets/post_10.jpg" alt="Embroidered pastel custom blouse" loading="lazy">
+        <div class="coll-body">
+          <p class="coll-name">Custom Blouses</p>
+          <p class="coll-desc">Beautifully embroidered, tailor-made blouses designed to complement any saree you love.</p>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section gallery-bg" id="gallery">
-  <div class="container">
-    <div class="gallery-hd">
-      <p class="label">Gallery</p>
-      <h2>From our collection</h2>
-    </div>
-    <div class="masonry">
-
-      <div class="masonry-item">
-        <img src="assets/post_06.jpg" alt="Tissue pattu sarees in beautiful colours with blouse" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_03_2.jpg" alt="Pastel pink self-work long frock, back view" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_08.jpg" alt="Soft lightweight fancy sarees in different shades" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_09.jpg" alt="Digital printed pattu sarees with copper border" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_11.jpg" alt="Chiffon black and cream stripe saree with blouse" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_08_2.jpg" alt="Soft fancy saree in pastel shade" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_06_2.jpg" alt="Close-up of tissue pattu saree" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_10_2.jpg" alt="Detail of embroidered designer blouse" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_03_3.jpg" alt="Pastel pink long frock, also available in lilac" loading="lazy">
-      </div>
-      <div class="masonry-item">
-        <img src="assets/post_09_2.jpg" alt="Digital printed pattu saree, second view" loading="lazy">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact-bg" id="contact">
-  <div class="container">
-    <p class="label">Get in Touch</p>
-    <h2>Ready to order?</h2>
-    <p class="contact-sub">DM us on WhatsApp or Instagram to ask about any piece, request a colour, or place a custom order. We'd love to hear from you.</p>
-    <div class="contact-btns">
-      <a href="https://wa.me/917416806316" class="btn btn-wa" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp: +91 74168 06316
-      </a>
-      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ghost" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @anagha_s_boutique
-      </a>
-    </div>
-    <p class="contact-also">
-      Also reach us at
-      <a href="tel:+919701434807">+91 9701 434807</a>
+    <p class="coll-cta">
+      Looking for something specific? <a href="https://wa.me/917416806316" target="_blank" rel="noopener">Send us a message</a> — we love custom orders.
     </p>
   </div>
+</div>
+
+<!-- Gallery -->
+<section id="gallery">
+  <div class="sec">
+    <p class="sec-label">From Our Feed</p>
+    <h2 class="sec-title">Latest Looks</h2>
+    <div class="sec-rule"></div>
+    <div class="gallery-grid">
+      <div class="gal-item">
+        <img src="assets/post_01.jpg" alt="Mangalagiri saree in deep red" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_06.jpg" alt="Tissue pattu sarees with blouse" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_02.jpg" alt="Apple green organza frock" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_09.jpg" alt="Digital printed pattu sarees with copper border" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_05.jpg" alt="Orange organza saree with copper border" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_11.jpg" alt="Black and cream chiffon stripe saree" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_08.jpg" alt="Soft light-weight fancy sarees in different shades" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_03_2.jpg" alt="Pastel pink long frock — back view" loading="lazy">
+      </div>
+      <div class="gal-item">
+        <img src="assets/post_10_2.jpg" alt="Close-up of embroidered custom blouse" loading="lazy">
+      </div>
+    </div>
+    <div class="gallery-cta">
+      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ig" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        See More on Instagram
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Contact -->
+<div class="contact-bg" id="contact">
+  <div class="sec">
+    <p class="sec-label">Get in Touch</p>
+    <h2 class="sec-title">Ready to Order?</h2>
+    <div class="sec-rule"></div>
+    <p class="contact-body">
+      Send us a message on WhatsApp with your requirements — fabric, colour, size, occasion — and we'll get back to you personally. Custom orders are always welcome.
+    </p>
+    <div class="contact-ctas">
+      <a href="https://wa.me/917416806316" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ig" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+    <div class="contact-details">
+      <div class="contact-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>WhatsApp: <a href="https://wa.me/917416806316">+91 74168 06316</a></span>
+      </div>
+      <div class="contact-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span>Call: <a href="tel:+919701434807">+91 97014 34807</a></span>
+      </div>
+      <div class="contact-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span>Worldwide Shipping Available</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
 <footer>
-  <p>Concept preview by Your Agency Name &middot; Not the official website of anagha_s_boutique</p>
+  <p>Concept preview by Your Agency Name &nbsp;&middot;&nbsp; Not the official website of anagha_s_boutique</p>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON (mobile) -->
-<a
-  href="https://wa.me/917416806316"
-  class="float-wa"
-  target="_blank"
-  rel="noopener"
-  aria-label="Chat with Anagha's Boutique on WhatsApp"
->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/917416806316" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat with Anagha's Boutique on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 </body>
