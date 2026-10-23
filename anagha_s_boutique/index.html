@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Anagha's Boutique — Customized Ethnic Wear by Anusha Puvvada</title>
+  <meta name="description" content="Anagha's Boutique by Anusha Puvvada — beautiful sarees, frocks, lehangas and customized blouses. Worldwide shipping. DM to order.">
+  <meta property="og:title" content="Anagha's Boutique — Customized Ethnic Wear">
+  <meta property="og:description" content="Beautiful sarees, frocks, lehangas and customized blouses by Anusha Puvvada. Worldwide shipping. DM to order.">
+  <meta property="og:image" content="https://nagamanikanta-manam.github.io/sample-sites/anagha_s_boutique/assets/profile.jpg">
+  <meta property="og:url" content="https://nagamanikanta-manam.github.io/sample-sites/anagha_s_boutique/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --crimson:    #763937;
+      --crimson-lt: #9c4a47;
+      --terra:      #bd816c;
+      --blush:      #d4b6aa;
+      --cream:      #faf8f5;
+      --parchment:  #f2ede4;
+      --sage:       #9eb5a2;
+      --sage-dk:    #6b7d5c;
+      --ink:        #2c1a1a;
+      --muted:      #7a5c5c;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(118, 57, 55, 0.12);
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--blush);
+      flex-shrink: 0;
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--crimson);
+      line-height: 1.15;
+    }
+
+    .nav-sub {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--crimson); }
+
+    @media (min-width: 720px) { .nav-links { display: flex; } }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem 1.5rem 3.5rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(20, 6, 6, 0.88) 0%,
+        rgba(20, 6, 6, 0.45) 45%,
+        rgba(20, 6, 6, 0.08) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      max-width: 560px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--blush);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 9vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--blush);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 2rem;
+      max-width: 420px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 420px) {
+      .hero-actions { flex-direction: row; flex-wrap: wrap; }
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.45);
+      animation: nudge 2.2s ease-in-out infinite;
+    }
+
+    @keyframes nudge {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.18s, box-shadow 0.18s;
+      white-space: nowrap;
+    }
+
+    .btn:active { transform: scale(0.96); }
+
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+    }
+    .btn-wa:hover { box-shadow: 0 6px 26px rgba(37, 211, 102, 0.5); }
+
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.55);
+    }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    .btn-primary {
+      background: var(--crimson);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(118, 57, 55, 0.32);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 22px rgba(118, 57, 55, 0.48); }
+
+    /* ── SHARED LAYOUT ── */
+    .section { padding: 5rem 1.5rem; }
+    .section[id] { scroll-margin-top: 64px; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--terra);
+      margin-bottom: 0.4rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.85rem, 5vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── ABOUT ── */
+    .about-bg { background: var(--parchment); }
+
+    .about-grid {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 1fr 1.15fr; }
+    }
+
+    .about-imgs {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+
+    .about-main {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .about-accent {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 48%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 10px;
+      border: 4px solid var(--parchment);
+    }
+
+    @media (min-width: 720px) { .about-accent { display: block; } }
+
+    .about-body p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 0.9rem;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1.25rem;
+    }
+
+    .pill {
+      background: var(--crimson);
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.28rem 0.85rem;
+      border-radius: 50px;
+    }
+
+    /* ── COLLECTIONS ── */
+    .collections-bg { background: var(--cream); }
+
+    .coll-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .coll-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .coll-card {
+      position: relative;
+      aspect-ratio: 2/3;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .coll-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.42s ease;
+      display: block;
+    }
+
+    .coll-card:hover img { transform: scale(1.05); }
+
+    .coll-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,6,6,0.82) 0%, transparent 55%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem 0.9rem 1rem;
+    }
+
+    .coll-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .coll-desc {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.4;
+    }
+
+    /* ── GALLERY ── */
+    .gallery-bg { background: var(--parchment); }
+
+    .gallery-hd { text-align: center; margin-bottom: 2rem; }
+
+    .masonry {
+      columns: 2;
+      column-gap: 0.7rem;
+    }
+
+    @media (min-width: 560px) { .masonry { columns: 3; } }
+    @media (min-width: 900px) { .masonry { columns: 4; } }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 0.7rem;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+    }
+
+    .masonry-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .masonry-item:hover img { transform: scale(1.04); }
+
+    /* ── CONTACT ── */
+    .contact-bg {
+      background: var(--crimson);
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-bg .label { color: var(--blush); }
+    .contact-bg h2 { color: #fff; }
+
+    .contact-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 460px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+
+    .contact-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    @media (min-width: 460px) {
+      .contact-btns { flex-direction: row; justify-content: center; }
+    }
+
+    .contact-also {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .contact-also a {
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-also a:hover { color: #fff; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #160a0a;
+      color: rgba(255,255,255,0.38);
+      text-align: center;
+      padding: 1.25rem 1rem;
+      font-size: 0.72rem;
+      line-height: 1.6;
+    }
+
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.75); }
+
+    /* ── FLOATING WHATSAPP (mobile only) ── */
+    .float-wa {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 200;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 22px rgba(0,0,0,0.28);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(0,0,0,0.35); }
+    .float-wa svg { width: 26px; height: 26px; }
+
+    @media (min-width: 720px) { .float-wa { display: none; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-brand">
+    <img src="assets/profile.jpg" alt="Anagha's Boutique" class="nav-logo">
+    <div>
+      <div class="nav-name">Anagha's Boutique</div>
+      <div class="nav-sub">Customized Ethnic Wear</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <img
+    src="assets/post_03.jpg"
+    alt="Pastel pink self-work long frock from Anagha's Boutique"
+    class="hero-bg"
+  >
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">By Anusha Puvvada</p>
+    <h1 class="hero-title">Anagha's<br><em>Boutique</em></h1>
+    <p class="hero-sub">Customized ethnic wear you'll love to wear — sarees, frocks, lehangas and designer blouses, shipped anywhere in the world.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/917416806316" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ghost" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about-bg" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-imgs">
+        <img
+          src="assets/post_01.jpg"
+          alt="Client wearing a rich Mangalagiri saree from Anagha's Boutique"
+          class="about-main"
+          loading="lazy"
+        >
+        <img
+          src="assets/post_12.jpg"
+          alt="Child in a Kalamkari lehanga from Anagha's Boutique"
+          class="about-accent"
+          loading="lazy"
+        >
+      </div>
+      <div class="about-body">
+        <p class="label">Our Story</p>
+        <h2>Crafted with love,<br>worn with joy</h2>
+        <p>Hi, I'm Anusha Puvvada — the heart behind Anagha's Boutique. What started as a deep love for ethnic fashion has grown into a carefully curated collection of sarees, frocks, lehangas and custom blouses.</p>
+        <p>Every piece I offer is handpicked for its quality, colour and craftsmanship — whether it's a rich silk pattu saree for a wedding or a breezy organza frock for a family celebration. I love helping people find outfits that make them feel beautiful.</p>
+        <p>We offer worldwide shipping, so no matter where you are, Anagha's Boutique comes to you.</p>
+        <div class="pills">
+          <span class="pill">Sarees</span>
+          <span class="pill">Long Frocks</span>
+          <span class="pill">Lehangas</span>
+          <span class="pill">Custom Blouses</span>
+          <span class="pill">Worldwide Shipping</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="section collections-bg" id="collections">
+  <div class="container">
+    <p class="label">Collections</p>
+    <h2>What we offer</h2>
+    <div class="coll-grid">
+
+      <div class="coll-card">
+        <img src="assets/post_07.jpg" alt="Cherry red organza saree with rich pallu" loading="lazy">
+        <div class="coll-overlay">
+          <div class="coll-title">Sarees</div>
+          <div class="coll-desc">Organza · Pattu · Mangalagiri · Tissue · Chiffon</div>
+        </div>
+      </div>
+
+      <div class="coll-card">
+        <img src="assets/post_02.jpg" alt="Apple green organza frock available in various colours" loading="lazy">
+        <div class="coll-overlay">
+          <div class="coll-title">Frocks &amp; Dresses</div>
+          <div class="coll-desc">Long frocks · Organza · Floral · Pastel shades</div>
+        </div>
+      </div>
+
+      <div class="coll-card">
+        <img src="assets/post_12.jpg" alt="Kalamkari lehanga with raw pattu blouse" loading="lazy">
+        <div class="coll-overlay">
+          <div class="coll-title">Lehangas</div>
+          <div class="coll-desc">Kalamkari · Traditional · Adults &amp; Kids</div>
+        </div>
+      </div>
+
+      <div class="coll-card">
+        <img src="assets/post_10.jpg" alt="Embroidered pastel customised designer blouse" loading="lazy">
+        <div class="coll-overlay">
+          <div class="coll-title">Custom Blouses</div>
+          <div class="coll-desc">Embroidered · Designer · Made to order</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-bg" id="gallery">
+  <div class="container">
+    <div class="gallery-hd">
+      <p class="label">Gallery</p>
+      <h2>From our collection</h2>
+    </div>
+    <div class="masonry">
+
+      <div class="masonry-item">
+        <img src="assets/post_06.jpg" alt="Tissue pattu sarees in beautiful colours with blouse" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_03_2.jpg" alt="Pastel pink self-work long frock, back view" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_08.jpg" alt="Soft lightweight fancy sarees in different shades" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_09.jpg" alt="Digital printed pattu sarees with copper border" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_11.jpg" alt="Chiffon black and cream stripe saree with blouse" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_08_2.jpg" alt="Soft fancy saree in pastel shade" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_06_2.jpg" alt="Close-up of tissue pattu saree" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_10_2.jpg" alt="Detail of embroidered designer blouse" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_03_3.jpg" alt="Pastel pink long frock, also available in lilac" loading="lazy">
+      </div>
+      <div class="masonry-item">
+        <img src="assets/post_09_2.jpg" alt="Digital printed pattu saree, second view" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-bg" id="contact">
+  <div class="container">
+    <p class="label">Get in Touch</p>
+    <h2>Ready to order?</h2>
+    <p class="contact-sub">DM us on WhatsApp or Instagram to ask about any piece, request a colour, or place a custom order. We'd love to hear from you.</p>
+    <div class="contact-btns">
+      <a href="https://wa.me/917416806316" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp: +91 74168 06316
+      </a>
+      <a href="https://www.instagram.com/anagha_s_boutique/" class="btn btn-ghost" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @anagha_s_boutique
+      </a>
+    </div>
+    <p class="contact-also">
+      Also reach us at
+      <a href="tel:+919701434807">+91 9701 434807</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Concept preview by Your Agency Name &middot; Not the official website of anagha_s_boutique</p>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON (mobile) -->
+<a
+  href="https://wa.me/917416806316"
+  class="float-wa"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Anagha's Boutique on WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
